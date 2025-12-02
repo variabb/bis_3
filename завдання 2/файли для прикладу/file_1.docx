@@ -1,0 +1,12 @@
+The quick brown fox jumps over the lazy dog.
+Pack my box with five dozen liquor jugs.
+Sphinx of black quartz, judge my vow.
+0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
+!@#$%^&*()_+-=[]{}|;:',.<>/?`~ 
+This file is used as a key for the modern book cipher demo.
+
+Український текст для розширення ключа:
+Привіт! Це перший ключовий файл для лабораторної роботи.
+Тут є українські літери, пробіли та розділові знаки.
+Мета — щоб у ключі було більше різних байтових блоків.
+Безпека інформаційних систем — цікава дисципліна.

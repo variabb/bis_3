@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сучасний книжковий шифр</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📚 Сучасний книжковий шифр</h1>
+      <p class="subtitle">
+        Шифрування та дешифрування на основі ключових файлів
+      </p>
+
+      <!-- Секція додавання ключових файлів -->
+      <div class="section">
+        <label for="keyFilesInput">Ключові файли (2-5 файлів):</label>
+        <input type="file" id="keyFilesInput" multiple accept="*/*" />
+        <p class="hint">Або введіть текст вручну нижче:</p>
+      </div>
+
+      <!-- Fallback: ручне введення тексту -->
+      <div class="section">
+        <label for="textareaFile1">Файл 1 (текст):</label>
+        <textarea
+          id="textareaFile1"
+          rows="3"
+          placeholder="Введіть текст для файлу 1..."
+        ></textarea>
+      </div>
+
+      <div class="section">
+        <label for="textareaFile2">Файл 2 (текст):</label>
+        <textarea
+          id="textareaFile2"
+          rows="3"
+          placeholder="Введіть текст для файлу 2..."
+        ></textarea>
+      </div>
+
+      <div class="section">
+        <label for="textareaFile3">Файл 3 (текст, опціонально):</label>
+        <textarea
+          id="textareaFile3"
+          rows="3"
+          placeholder="Введіть текст для файлу 3 (необов'язково)..."
+        ></textarea>
+      </div>
+
+      <!-- Параметр k -->
+      <div class="section">
+        <label for="kInput">Довжина блоку k (біт):</label>
+        <input type="number" id="kInput" value="8" min="1" max="32" />
+        <p class="hint">
+          Розмір блоку в бітах для розбиття ключових файлів (рекомендовано: 8)
+        </p>
+      </div>
+
+      <!-- JSON ввід -->
+      <div class="section">
+        <label for="jsonInput">JSON ввід:</label>
+        <textarea
+          id="jsonInput"
+          rows="8"
+          placeholder='Для шифрування: {"message": "Привіт світ!"}&#10;&#10;Для дешифрування: {"KBits": 8, "BitLength": 64, "Files": [...], "Addresses": [...]}'
+        ></textarea>
+      </div>
+
+      <!-- Кнопки -->
+      <div class="buttons">
+        <button id="encryptBtn">🔒 Шифрувати</button>
+        <button id="decryptBtn">🔓 Дешифрувати</button>
+      </div>
+
+      <!-- JSON вивід -->
+      <div class="section">
+        <label for="jsonOutput">JSON вивід:</label>
+        <textarea
+          id="jsonOutput"
+          rows="15"
+          readonly
+          placeholder="Тут з'явиться результат..."
+        ></textarea>
+      </div>
+
+      <!-- Статус -->
+      <div id="status" class="status"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

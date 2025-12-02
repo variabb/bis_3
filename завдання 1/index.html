@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Книжковий шифр (Book Cipher)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Книжковий шифр</h1>
+      <p class="subtitle">Шифрування з двійковими координатами</p>
+
+      <div class="section">
+        <label for="keyText">Ключовий текст (книга):</label>
+        <textarea
+          id="keyText"
+          rows="10"
+          placeholder="Вставте текст ключа (книгу) тут..."
+        ></textarea>
+      </div>
+
+      <div class="section">
+        <label for="jsonInput">JSON-повідомлення:</label>
+        <textarea
+          id="jsonInput"
+          rows="6"
+          placeholder='{"message": "Привіт світ!"}'
+        ></textarea>
+      </div>
+
+      <div class="buttons">
+        <button id="encryptBtn" onclick="handleEncrypt()">
+          Encrypt (Зашифрувати)
+        </button>
+        <button id="decryptBtn" onclick="handleDecrypt()">
+          Decrypt (Розшифрувати)
+        </button>
+      </div>
+
+      <div class="section">
+        <label for="result">Результат:</label>
+        <textarea
+          id="result"
+          rows="8"
+          readonly
+          placeholder="Тут з'явиться результат..."
+        ></textarea>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
